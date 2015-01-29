@@ -43,11 +43,15 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)checkStatus
+- (void)fadeButtons
 {
     self.logginButton.enabled = ![AppDelegate token];
     self.logoutButton.enabled = [AppDelegate token];
-    
+}
+
+- (void)checkStatus
+{
+    [self fadeButtons];
     if (![AppDelegate userId]) {
         GAUserService *userService = [[GAUserService alloc] init];
         userService.delegate = self;
@@ -73,7 +77,8 @@
 
 - (IBAction)logout:(id)sender {
     [AppDelegate saveUserToken:nil];
-    [self checkStatus];
+    [AppDelegate saveUserId:nil];
+    [self fadeButtons];
     [self showImages:nil];
 }
 
