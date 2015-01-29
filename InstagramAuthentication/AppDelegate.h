@@ -14,6 +14,8 @@
 
 + (NSString *)token;
 + (void)saveUserToken:(NSString *)token;
++ (NSString *)userId;
++ (void)saveUserId:(NSString *)userId;
 
 @end
 

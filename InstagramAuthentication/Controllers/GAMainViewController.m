@@ -10,6 +10,7 @@
 #import "GAImageCollectionDataSource.h"
 #import "AppDelegate.h"
 #import "GAImageService.h"
+#import "GAUserService.h"
 
 @interface GAMainViewController ()
 
@@ -46,7 +47,14 @@
 {
     self.logginButton.enabled = ![AppDelegate token];
     self.logoutButton.enabled = [AppDelegate token];
-    [self loadImages];
+    
+    if (![AppDelegate userId]) {
+        GAUserService *userService = [[GAUserService alloc] init];
+        userService.delegate = self;
+        [userService fetchUserInformation];
+    } else {
+        [self loadImages];
+    }
 }
 
 - (void)loadImages {
@@ -58,14 +66,6 @@
     }
 }
 
-#pragma mark GAImageDelegate
-
-- (void)showImages:(NSArray *)images {
-    self.dataSource.items = images;
-    [self.collectionView reloadData];
-    [self.activityIndicator stopAnimating];
-}
-
 - (IBAction)connect:(id)sender {
     NSString* urlString = [kBaseURL stringByAppendingFormat:kAuthenticationURL,kClientID,kRedirectURI];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
@@ -75,6 +75,20 @@
     [AppDelegate saveUserToken:nil];
     [self checkStatus];
     [self showImages:nil];
+}
+
+#pragma mark GAImageDelegate
+
+- (void)showImages:(NSArray *)images {
+    self.dataSource.items = images;
+    [self.collectionView reloadData];
+    [self.activityIndicator stopAnimating];
+}
+
+#pragma mark GAUserInformation
+
+- (void)reloadUserInformation {
+    [self checkStatus];
 }
 
 @end

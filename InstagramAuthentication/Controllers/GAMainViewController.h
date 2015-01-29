@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GAImageDelegate.h"
+#import "GAUserDelegate.h"
 
-@interface GAMainViewController : UIViewController <GAImageDelegate>
+@interface GAMainViewController : UIViewController <GAImageDelegate, GAUserDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *logginButton;
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton;

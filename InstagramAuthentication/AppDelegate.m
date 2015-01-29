@@ -71,4 +71,13 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
++ (NSString *)userId {
+    return [[NSUserDefaults standardUserDefaults] stringForKey:@"GA_userID"];
+}
+
++ (void)saveUserId:(NSString *)userId {
+    [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"GA_userID"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 @end

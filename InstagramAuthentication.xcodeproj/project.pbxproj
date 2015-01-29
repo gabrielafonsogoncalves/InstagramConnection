@@ -24,6 +24,7 @@
 		D90060BF1A7A4930009AB89C /* GAImageCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060BE1A7A4930009AB89C /* GAImageCollectionDataSource.m */; };
 		D90060C21A7A49BB009AB89C /* GACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060C11A7A49BB009AB89C /* GACollectionViewCell.m */; };
 		D90060C41A7A4AD9009AB89C /* GACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90060C31A7A4AD9009AB89C /* GACollectionViewCell.xib */; };
+		D90060C71A7A5528009AB89C /* GAUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060C61A7A5528009AB89C /* GAUserService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,9 @@
 		D90060C01A7A49BB009AB89C /* GACollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GACollectionViewCell.h; path = Controllers/GACollectionViewCell.h; sourceTree = "<group>"; };
 		D90060C11A7A49BB009AB89C /* GACollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GACollectionViewCell.m; path = Controllers/GACollectionViewCell.m; sourceTree = "<group>"; };
 		D90060C31A7A4AD9009AB89C /* GACollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GACollectionViewCell.xib; path = Views/GACollectionViewCell.xib; sourceTree = "<group>"; };
+		D90060C51A7A5528009AB89C /* GAUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAUserService.h; path = Services/GAUserService.h; sourceTree = "<group>"; };
+		D90060C61A7A5528009AB89C /* GAUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GAUserService.m; path = Services/GAUserService.m; sourceTree = "<group>"; };
+		D90060C91A7A575D009AB89C /* GAUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAUserDelegate.h; path = Services/GAUserDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,9 @@
 				D90060B11A7A41B1009AB89C /* GAImageService.m */,
 				D90060B21A7A41B1009AB89C /* GAQueueService.h */,
 				D90060B31A7A41B1009AB89C /* GAQueueService.m */,
+				D90060C51A7A5528009AB89C /* GAUserService.h */,
+				D90060C61A7A5528009AB89C /* GAUserService.m */,
+				D90060C91A7A575D009AB89C /* GAUserDelegate.h */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -360,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90060C71A7A5528009AB89C /* GAUserService.m in Sources */,
 				D90060B51A7A41B1009AB89C /* GAQueueService.m in Sources */,
 				D90060B41A7A41B1009AB89C /* GAImageService.m in Sources */,
 				D900607C1A7A3174009AB89C /* AppDelegate.m in Sources */,
