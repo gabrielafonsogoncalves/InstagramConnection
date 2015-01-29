@@ -17,9 +17,8 @@
 - (void)fetchImages {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
-    [manager GET:[NSString stringWithFormat:@"https://api.instagram.com/v1/users/3/media/recent/?access_token=%@", [AppDelegate token]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSLog(@"GABO response objects %@", responseObject);
+    [manager GET:[NSString stringWithFormat:@"https://api.instagram.com/v1/users/self/feed?access_token=%@", [AppDelegate token]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
         NSMutableArray *posts = [[NSMutableArray alloc] init];
         GAImageBuilder *builder = [[GAImageBuilder alloc] init];
         for (NSDictionary *json in responseObject[@"data"]) {

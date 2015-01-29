@@ -32,16 +32,21 @@
     self.collectionView.dataSource = self.dataSource;
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.logginButton.enabled = ![AppDelegate token];
-    self.logoutButton.enabled = [AppDelegate token];
-    [self loadImages];
+    [self checkStatus];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)checkStatus
+{
+    self.logginButton.enabled = ![AppDelegate token];
+    self.logoutButton.enabled = [AppDelegate token];
+    [self loadImages];
 }
 
 - (void)loadImages {
@@ -67,7 +72,9 @@
 }
 
 - (IBAction)logout:(id)sender {
-    
+    [AppDelegate saveUserToken:nil];
+    [self checkStatus];
+    [self showImages:nil];
 }
 
 @end

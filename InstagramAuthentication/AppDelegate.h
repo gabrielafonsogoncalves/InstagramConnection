@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 + (NSString *)token;
++ (void)saveUserToken:(NSString *)token;
 
 @end
 

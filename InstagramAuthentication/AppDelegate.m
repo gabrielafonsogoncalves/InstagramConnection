@@ -54,7 +54,10 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     NSArray *components = [url.absoluteString componentsSeparatedByString:@"="];
-    [self saveUserToken:components.lastObject];
+    [AppDelegate saveUserToken:components.lastObject];
+    
+    GAMainViewController *firstViewController = [[GAMainViewController alloc] initWithNibName:@"GAMainViewController" bundle:nil];
+    [self.window.rootViewController presentViewController:firstViewController animated:NO completion:nil];
 
     return YES;
 }
@@ -63,7 +66,7 @@
     return [[NSUserDefaults standardUserDefaults] stringForKey:@"GA_token"];
 }
 
-- (void)saveUserToken:(NSString *)token {
++ (void)saveUserToken:(NSString *)token {
     [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"GA_token"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
