@@ -11,7 +11,12 @@
 
 @interface GAMainViewController : UIViewController <GAImageDelegate>
 
+@property (strong, nonatomic) IBOutlet UIButton *logginButton;
+@property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+
+- (IBAction)connect:(id)sender;
+- (IBAction)logout:(id)sender;
 
 @end

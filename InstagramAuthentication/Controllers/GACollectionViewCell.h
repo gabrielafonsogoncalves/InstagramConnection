@@ -10,4 +10,6 @@
 
 @interface GACollectionViewCell : UICollectionViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *postImageView;
+
 @end

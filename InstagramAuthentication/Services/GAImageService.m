@@ -6,26 +6,28 @@
 //  Copyright (c) 2015 ETC. All rights reserved.
 //
 
-#import "GAImageService.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
+#import "GAImageService.h"
+#import "GAPost.h"
+#import "AppDelegate.h"
 #import "GAImageBuilder.h"
-#import "GARegularImage.h"
 
 @implementation GAImageService
 
-- (void)fetchImages
-{
+- (void)fetchImages {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://www.kogimobile.com/rm-carousel.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+    [manager GET:[NSString stringWithFormat:@"https://api.instagram.com/v1/users/3/media/recent/?access_token=%@", [AppDelegate token]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSMutableArray *images = [[NSMutableArray alloc] init];
+        NSLog(@"GABO response objects %@", responseObject);
+        NSMutableArray *posts = [[NSMutableArray alloc] init];
         GAImageBuilder *builder = [[GAImageBuilder alloc] init];
-        for (NSDictionary *json in responseObject[@"images"]) {
-            GARegularImage *image = [builder buildObjectFromJSON:json];
-            [images addObject:image];
+        for (NSDictionary *json in responseObject[@"data"]) {
+            GAPost *post = [builder buildObjectFromJSON:json];
+            [posts addObject:post];
         }
         
-        [self.delegate showImages:images];
+        [self.delegate showImages:posts];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

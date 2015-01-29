@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface GAImageCollectionDataSource : NSObject
+@interface GAImageCollectionDataSource : NSObject <UICollectionViewDataSource>
+
+@property (strong, nonatomic) NSArray *items;
 
 @end

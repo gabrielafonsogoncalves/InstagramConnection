@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  InstagramAuthentication
+//  PlayStationRSSFeed
 //
 //  Created by Gabriel Afonso on 1/29/15.
 //  Copyright (c) 2015 ETC. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "GAMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
+    GAMainViewController *firstViewController = [[GAMainViewController alloc] initWithNibName:@"GAMainViewController" bundle:nil];
+    [self.window setRootViewController:firstViewController];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -43,6 +47,25 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Handling incoming URL
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSArray *components = [url.absoluteString componentsSeparatedByString:@"="];
+    [self saveUserToken:components.lastObject];
+
+    return YES;
+}
+
++ (NSString *)token {
+    return [[NSUserDefaults standardUserDefaults] stringForKey:@"GA_token"];
+}
+
+- (void)saveUserToken:(NSString *)token {
+    [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"GA_token"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

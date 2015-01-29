@@ -10,4 +10,7 @@
 
 @interface GAPost : NSObject
 
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *imageLink;
+
 @end

@@ -10,4 +10,7 @@
 
 @implementation GAPost
 
+@synthesize imageLink;
+@synthesize title;
+
 @end

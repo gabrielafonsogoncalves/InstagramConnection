@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GARegularImage.h"
+#import "GAPost.h"
 
 @interface GAImageBuilder : NSObject
 
-- (GARegularImage *)buildObjectFromJSON:(NSDictionary *)json;
+- (GAPost *)buildObjectFromJSON:(NSDictionary *)json;
 
 @end

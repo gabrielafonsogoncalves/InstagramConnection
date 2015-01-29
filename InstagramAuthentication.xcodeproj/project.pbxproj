@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E008B60D144542AC2DBA4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06CBB6DABE34219BBB09F0E /* libPods.a */; };
 		D90060791A7A3174009AB89C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060781A7A3174009AB89C /* main.m */; };
 		D900607C1A7A3174009AB89C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D900607B1A7A3174009AB89C /* AppDelegate.m */; };
 		D900607E1A7A3174009AB89C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D900607D1A7A3174009AB89C /* Images.xcassets */; };
 		D90060811A7A3174009AB89C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D900607F1A7A3174009AB89C /* LaunchScreen.xib */; };
 		D900608D1A7A3174009AB89C /* InstagramAuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D900608C1A7A3174009AB89C /* InstagramAuthenticationTests.m */; };
+		D900609F1A7A321C009AB89C /* GAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D900609C1A7A321C009AB89C /* GAMainViewController.m */; };
+		D90060A41A7A322F009AB89C /* GAMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90060A21A7A322F009AB89C /* GAMainViewController.xib */; };
+		D90060AC1A7A33F7009AB89C /* ic_instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = D90060AA1A7A33F7009AB89C /* ic_instagram.png */; };
+		D90060AD1A7A33F7009AB89C /* ic_no_image.png in Resources */ = {isa = PBXBuildFile; fileRef = D90060AB1A7A33F7009AB89C /* ic_no_image.png */; };
+		D90060B41A7A41B1009AB89C /* GAImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060B11A7A41B1009AB89C /* GAImageService.m */; };
+		D90060B51A7A41B1009AB89C /* GAQueueService.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060B31A7A41B1009AB89C /* GAQueueService.m */; };
+		D90060B91A7A4758009AB89C /* GAImageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060B81A7A4758009AB89C /* GAImageBuilder.m */; };
+		D90060BC1A7A4796009AB89C /* GAPost.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060BB1A7A4796009AB89C /* GAPost.m */; };
+		D90060BF1A7A4930009AB89C /* GAImageCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060BE1A7A4930009AB89C /* GAImageCollectionDataSource.m */; };
+		D90060C21A7A49BB009AB89C /* GACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D90060C11A7A49BB009AB89C /* GACollectionViewCell.m */; };
+		D90060C41A7A4AD9009AB89C /* GACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90060C31A7A4AD9009AB89C /* GACollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		711F891A496040FAACEC600E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		A06CBB6DABE34219BBB09F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90060731A7A3174009AB89C /* InstagramAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90060771A7A3174009AB89C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90060781A7A3174009AB89C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,6 +49,25 @@
 		D90060861A7A3174009AB89C /* InstagramAuthenticationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramAuthenticationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D900608B1A7A3174009AB89C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D900608C1A7A3174009AB89C /* InstagramAuthenticationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthenticationTests.m; sourceTree = "<group>"; };
+		D900609B1A7A321C009AB89C /* GAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAMainViewController.h; path = Controllers/GAMainViewController.h; sourceTree = "<group>"; };
+		D900609C1A7A321C009AB89C /* GAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GAMainViewController.m; path = Controllers/GAMainViewController.m; sourceTree = "<group>"; };
+		D90060A21A7A322F009AB89C /* GAMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GAMainViewController.xib; path = Views/GAMainViewController.xib; sourceTree = "<group>"; };
+		D90060AA1A7A33F7009AB89C /* ic_instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_instagram.png; path = Resources/ic_instagram.png; sourceTree = "<group>"; };
+		D90060AB1A7A33F7009AB89C /* ic_no_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_no_image.png; path = Resources/ic_no_image.png; sourceTree = "<group>"; };
+		D90060AF1A7A41B1009AB89C /* GAImageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAImageDelegate.h; path = Services/GAImageDelegate.h; sourceTree = "<group>"; };
+		D90060B01A7A41B1009AB89C /* GAImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAImageService.h; path = Services/GAImageService.h; sourceTree = "<group>"; };
+		D90060B11A7A41B1009AB89C /* GAImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GAImageService.m; path = Services/GAImageService.m; sourceTree = "<group>"; };
+		D90060B21A7A41B1009AB89C /* GAQueueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAQueueService.h; path = Services/GAQueueService.h; sourceTree = "<group>"; };
+		D90060B31A7A41B1009AB89C /* GAQueueService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GAQueueService.m; path = Services/GAQueueService.m; sourceTree = "<group>"; };
+		D90060B71A7A4758009AB89C /* GAImageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAImageBuilder.h; path = Builder/GAImageBuilder.h; sourceTree = "<group>"; };
+		D90060B81A7A4758009AB89C /* GAImageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GAImageBuilder.m; path = Builder/GAImageBuilder.m; sourceTree = "<group>"; };
+		D90060BA1A7A4796009AB89C /* GAPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAPost.h; path = Model/GAPost.h; sourceTree = "<group>"; };
+		D90060BB1A7A4796009AB89C /* GAPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GAPost.m; path = Model/GAPost.m; sourceTree = "<group>"; };
+		D90060BD1A7A4930009AB89C /* GAImageCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAImageCollectionDataSource.h; path = Controllers/GAImageCollectionDataSource.h; sourceTree = "<group>"; };
+		D90060BE1A7A4930009AB89C /* GAImageCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GAImageCollectionDataSource.m; path = Controllers/GAImageCollectionDataSource.m; sourceTree = "<group>"; };
+		D90060C01A7A49BB009AB89C /* GACollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GACollectionViewCell.h; path = Controllers/GACollectionViewCell.h; sourceTree = "<group>"; };
+		D90060C11A7A49BB009AB89C /* GACollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GACollectionViewCell.m; path = Controllers/GACollectionViewCell.m; sourceTree = "<group>"; };
+		D90060C31A7A4AD9009AB89C /* GACollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GACollectionViewCell.xib; path = Views/GACollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E008B60D144542AC2DBA4A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,12 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62EC04751855409595A77133 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A06CBB6DABE34219BBB09F0E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D900606A1A7A3174009AB89C = {
 			isa = PBXGroup;
 			children = (
 				D90060751A7A3174009AB89C /* InstagramAuthentication */,
 				D90060891A7A3174009AB89C /* InstagramAuthenticationTests */,
 				D90060741A7A3174009AB89C /* Products */,
+				711F891A496040FAACEC600E /* Pods.xcconfig */,
+				62EC04751855409595A77133 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +120,12 @@
 		D90060751A7A3174009AB89C /* InstagramAuthentication */ = {
 			isa = PBXGroup;
 			children = (
+				D90060B61A7A474C009AB89C /* Builder */,
+				D90060AE1A7A41A2009AB89C /* Services */,
+				D90060A91A7A33A6009AB89C /* Resources */,
+				D90060A51A7A3253009AB89C /* Model */,
+				D90060A01A7A3223009AB89C /* Views */,
+				D90060961A7A31CF009AB89C /* Controllers */,
 				D900607A1A7A3174009AB89C /* AppDelegate.h */,
 				D900607B1A7A3174009AB89C /* AppDelegate.m */,
 				D900607D1A7A3174009AB89C /* Images.xcassets */,
@@ -111,6 +161,67 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D90060961A7A31CF009AB89C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D900609B1A7A321C009AB89C /* GAMainViewController.h */,
+				D900609C1A7A321C009AB89C /* GAMainViewController.m */,
+				D90060BD1A7A4930009AB89C /* GAImageCollectionDataSource.h */,
+				D90060BE1A7A4930009AB89C /* GAImageCollectionDataSource.m */,
+				D90060C01A7A49BB009AB89C /* GACollectionViewCell.h */,
+				D90060C11A7A49BB009AB89C /* GACollectionViewCell.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D90060A01A7A3223009AB89C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D90060A21A7A322F009AB89C /* GAMainViewController.xib */,
+				D90060C31A7A4AD9009AB89C /* GACollectionViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D90060A51A7A3253009AB89C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D90060BA1A7A4796009AB89C /* GAPost.h */,
+				D90060BB1A7A4796009AB89C /* GAPost.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D90060A91A7A33A6009AB89C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D90060AA1A7A33F7009AB89C /* ic_instagram.png */,
+				D90060AB1A7A33F7009AB89C /* ic_no_image.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D90060AE1A7A41A2009AB89C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D90060AF1A7A41B1009AB89C /* GAImageDelegate.h */,
+				D90060B01A7A41B1009AB89C /* GAImageService.h */,
+				D90060B11A7A41B1009AB89C /* GAImageService.m */,
+				D90060B21A7A41B1009AB89C /* GAQueueService.h */,
+				D90060B31A7A41B1009AB89C /* GAQueueService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		D90060B61A7A474C009AB89C /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D90060B71A7A4758009AB89C /* GAImageBuilder.h */,
+				D90060B81A7A4758009AB89C /* GAImageBuilder.m */,
+			);
+			name = Builder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D90060901A7A3174009AB89C /* Build configuration list for PBXNativeTarget "InstagramAuthentication" */;
 			buildPhases = (
+				7651C5B763844A3396A5DD28 /* Check Pods Manifest.lock */,
 				D900606F1A7A3174009AB89C /* Sources */,
 				D90060701A7A3174009AB89C /* Frameworks */,
 				D90060711A7A3174009AB89C /* Resources */,
+				7C7D565EAFCA4A1D98168FC9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,7 +304,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90060C41A7A4AD9009AB89C /* GACollectionViewCell.xib in Resources */,
 				D90060811A7A3174009AB89C /* LaunchScreen.xib in Resources */,
+				D90060AC1A7A33F7009AB89C /* ic_instagram.png in Resources */,
+				D90060A41A7A322F009AB89C /* GAMainViewController.xib in Resources */,
+				D90060AD1A7A33F7009AB89C /* ic_no_image.png in Resources */,
 				D900607E1A7A3174009AB89C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,13 +322,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7651C5B763844A3396A5DD28 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C7D565EAFCA4A1D98168FC9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D900606F1A7A3174009AB89C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90060B51A7A41B1009AB89C /* GAQueueService.m in Sources */,
+				D90060B41A7A41B1009AB89C /* GAImageService.m in Sources */,
 				D900607C1A7A3174009AB89C /* AppDelegate.m in Sources */,
+				D900609F1A7A321C009AB89C /* GAMainViewController.m in Sources */,
+				D90060B91A7A4758009AB89C /* GAImageBuilder.m in Sources */,
 				D90060791A7A3174009AB89C /* main.m in Sources */,
+				D90060C21A7A49BB009AB89C /* GACollectionViewCell.m in Sources */,
+				D90060BF1A7A4930009AB89C /* GAImageCollectionDataSource.m in Sources */,
+				D90060BC1A7A4796009AB89C /* GAPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +480,7 @@
 		};
 		D90060911A7A3174009AB89C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 711F891A496040FAACEC600E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstagramAuthentication/Info.plist;
@@ -333,6 +491,7 @@
 		};
 		D90060921A7A3174009AB89C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 711F891A496040FAACEC600E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstagramAuthentication/Info.plist;
@@ -394,6 +553,7 @@
 				D90060921A7A3174009AB89C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D90060931A7A3174009AB89C /* Build configuration list for PBXNativeTarget "InstagramAuthenticationTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +562,7 @@
 				D90060951A7A3174009AB89C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

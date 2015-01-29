@@ -7,14 +7,16 @@
 //
 
 #import "GAImageBuilder.h"
+#import "GAPost.h"
 
 @implementation GAImageBuilder
 
-- (GARegularImage *)buildObjectFromJSON:(NSDictionary *)json
-{
-    GARegularImage *image = [[GARegularImage alloc] init];
-    image.imageLink = json[@"image_url"];
-    image.title = json[@"caption"];
+- (GAPost *)buildObjectFromJSON:(NSDictionary *)json {
+    NSDictionary *images = json[@"images"];
+    NSDictionary *thumbnail = images[@"thumbnail"];
+    GAPost *image = [[GAPost alloc] init];
+    image.imageLink = thumbnail[@"url"];
+    
     return image;
 }
 

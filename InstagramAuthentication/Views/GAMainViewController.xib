@@ -7,7 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GAMainViewController">
             <connections>
                 <outlet property="activityIndicator" destination="kSm-u7-Xqo" id="thT-5u-S8A"/>
-                <outlet property="tableView" destination="o50-Qy-3pk" id="zL5-M8-NcE"/>
+                <outlet property="collectionView" destination="RMA-bv-bRM" id="lhg-Ko-Oqe"/>
+                <outlet property="logginButton" destination="l8U-CN-lOU" id="oQp-O2-pSE"/>
+                <outlet property="logoutButton" destination="5YB-cM-pPp" id="1X2-UO-M6q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,38 +18,78 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayStation RSS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiY-i3-c42">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiY-i3-c42">
                     <rect key="frame" x="206" y="19" width="187" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="187" id="5Bb-zg-nlx"/>
                         <constraint firstAttribute="height" constant="21" id="6ah-3Z-8pc"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.91372549020000005" green="0.50196078430000002" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="174" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="o50-Qy-3pk">
-                    <rect key="frame" x="0.0" y="62" width="600" height="538"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8U-CN-lOU">
+                    <rect key="frame" x="255" y="50" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="RsI-KV-HiT"/>
+                        <constraint firstAttribute="height" constant="90" id="lgq-JU-446"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="ic_instagram.png">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="connect:" destination="-1" eventType="touchUpInside" id="ejP-ec-ewb"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RMA-bv-bRM">
+                    <rect key="frame" x="0.0" y="171" width="600" height="429"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wkx-Kl-twY">
+                        <size key="itemSize" width="160" height="180"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kSm-u7-Xqo">
-                    <rect key="frame" x="281" y="281" width="37" height="37"/>
+                    <rect key="frame" x="281" y="282" width="37" height="37"/>
                     <color key="color" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                 </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YB-cM-pPp">
+                    <rect key="frame" x="499" y="19" width="93" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="eeG-LH-eIM"/>
+                        <constraint firstAttribute="width" constant="93" id="tSV-wl-1RU"/>
+                    </constraints>
+                    <state key="normal" title="Logout">
+                        <color key="titleColor" red="0.91372549020000005" green="0.50196078430000002" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="logout:" destination="-1" eventType="touchUpInside" id="cEE-Hc-Ft3"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="o50-Qy-3pk" secondAttribute="bottom" id="3vc-5r-0uT"/>
-                <constraint firstAttribute="centerY" secondItem="kSm-u7-Xqo" secondAttribute="centerY" id="8kw-JY-fUt"/>
-                <constraint firstAttribute="trailing" secondItem="o50-Qy-3pk" secondAttribute="trailing" id="DHz-6P-fEr"/>
+                <constraint firstAttribute="trailing" secondItem="RMA-bv-bRM" secondAttribute="trailing" id="0Vk-Vh-u8L"/>
+                <constraint firstAttribute="centerX" secondItem="kSm-u7-Xqo" secondAttribute="centerX" id="Fp4-n4-ogZ"/>
                 <constraint firstItem="FiY-i3-c42" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="JGe-eo-5xa"/>
-                <constraint firstItem="o50-Qy-3pk" firstAttribute="top" secondItem="FiY-i3-c42" secondAttribute="bottom" constant="22" id="MAg-lV-s1Y"/>
+                <constraint firstAttribute="centerY" secondItem="kSm-u7-Xqo" secondAttribute="centerY" id="M3z-2h-Pj2"/>
                 <constraint firstAttribute="centerX" secondItem="FiY-i3-c42" secondAttribute="centerX" id="NTs-NR-wfU"/>
-                <constraint firstAttribute="centerX" secondItem="o50-Qy-3pk" secondAttribute="centerX" id="a0b-Eg-Ll6"/>
-                <constraint firstItem="o50-Qy-3pk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jmN-35-42K"/>
-                <constraint firstAttribute="centerX" secondItem="kSm-u7-Xqo" secondAttribute="centerX" id="zB5-TU-DXZ"/>
+                <constraint firstItem="RMA-bv-bRM" firstAttribute="top" secondItem="l8U-CN-lOU" secondAttribute="bottom" constant="31" id="NiX-zs-4aL"/>
+                <constraint firstItem="5YB-cM-pPp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="PTN-Fv-PeX"/>
+                <constraint firstAttribute="centerX" secondItem="l8U-CN-lOU" secondAttribute="centerX" id="alG-eq-BuO"/>
+                <constraint firstItem="l8U-CN-lOU" firstAttribute="top" secondItem="FiY-i3-c42" secondAttribute="bottom" constant="10" id="i35-pD-Mlh"/>
+                <constraint firstItem="RMA-bv-bRM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s2i-Qy-GQY"/>
+                <constraint firstAttribute="trailing" secondItem="5YB-cM-pPp" secondAttribute="trailing" constant="8" id="ser-9k-zJc"/>
+                <constraint firstAttribute="bottom" secondItem="RMA-bv-bRM" secondAttribute="bottom" id="xRd-5d-VPw"/>
             </constraints>
             <point key="canvasLocation" x="139" y="180"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_instagram.png" width="128" height="128"/>
+    </resources>
 </document>
